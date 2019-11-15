@@ -8,6 +8,9 @@ $faker = Faker\Factory::create();
 // $name = $faker->name('female');
 // $company = $faker->company;
 // $now = $faker->date($format = 'Y-m-d', $max = 'now'); 
+// $img = $faker->imageUrl($width = 640, $height = 480);
+// $img = $faker->image("public/images", 640, 480, 'cats');
+// echo $img;die;
 // var_dump($name, $company, $now);die;
 
 // tạo dữ liệu mẫu cho bảng roles
@@ -55,8 +58,16 @@ for ($i=0; $i < 10; $i++) {
 	$name = $faker->name('female');
 	$desc = $faker->realText($maxNbChars = 200, $indexSize = 2);
 	$showMenu = rand(0, 1);
-	$sql = "insert into categories (name, description, show_menu)
-			values ('$name', '$desc', $showMenu)";
+	// làm sạch dữ liệu trước khi lưu vào db
+	$desc = str_replace("'", "\'", $desc);
+
+	$sql = "insert into categories 
+				(name, description, show_menu)
+			values 
+				('$name', '$desc', $showMenu)";
+
+	// echo "<pre>";
+	// var_dump($sql);
 	executeQuery($sql);
 }
 // tạo dữ liệu mẫu cho bảng products
