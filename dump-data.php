@@ -76,8 +76,8 @@ for ($i=0; $i < 100; $i++) {
 	$sku = strtoupper(uniqid());
 	$cate_id = rand(1, 20);
 	$disabled_comment = rand(0, 1);
-	$price = rand(1000, 999999999);
-	$sale_price = rand(1000, 999999999);
+	$price = rand(1000, 99999);
+	$sale_price = rand(1000, 99999);
 	$detail = $faker->realText($maxNbChars = 200, $indexSize = 2);
 	$detail = str_replace("'","\'", $detail);
 	$feature_image = $faker->image('public/images', 640, 480, 'cats');
