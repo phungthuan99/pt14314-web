@@ -2,9 +2,9 @@
 // tạo ra kết nối đến csdl
 function getConnect(){
 	$host = "127.0.0.1";
-	$dbname = "pt14317";
+	$dbname = "pt14314";
 	$dbusername = "root";
-	$dbpwd = "123456";
+	$dbpwd = "";
 	try{
 		// đoạn code có khả năng gây(bị) lỗi
 		$connect = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $dbusername, $dbpwd);

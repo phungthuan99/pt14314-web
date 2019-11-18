@@ -68,7 +68,7 @@ for ($i=0; $i < 10; $i++) {
 
 	// echo "<pre>";
 	// var_dump($sql);
-	executeQuery($sql);
+	// executeQuery($sql);
 }
 // tạo dữ liệu mẫu cho bảng products
 for ($i=0; $i < 100; $i++) { 
@@ -115,7 +115,7 @@ for ($i=0; $i < 100; $i++) {
 
 					'$status',
 					'$rating')";
-	// executeQuery($sqlQuery);
+	executeQuery($sqlQuery);
 }
 // tạo dữ liệu mẫu cho bảng product_galleries
 // tạo dữ liệu mẫu cho bảng vouchers
