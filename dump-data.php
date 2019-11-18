@@ -71,6 +71,52 @@ for ($i=0; $i < 10; $i++) {
 	executeQuery($sql);
 }
 // tạo dữ liệu mẫu cho bảng products
+for ($i=0; $i < 100; $i++) { 
+	$name = $faker->name;
+	$sku = strtoupper(uniqid());
+	$cate_id = rand(1, 20);
+	$disabled_comment = rand(0, 1);
+	$price = rand(1000, 999999999);
+	$sale_price = rand(1000, 999999999);
+	$detail = $faker->realText($maxNbChars = 200, $indexSize = 2);
+	$detail = str_replace("'","\'", $detail);
+	$feature_image = $faker->image('public/images', 640, 480, 'cats');
+	$feature_image = str_replace("public/", "", $feature_image);
+	$view_count = rand(0, 999999);
+	$status = 1;
+	$rating = rand(1, 5);
+
+	$sqlQuery = "insert into products 
+					(name, 
+					sku, 
+					cate_id, 
+
+					disabled_comment, 
+					price, 
+					sale_price,
+					
+					detail,
+					feature_image,
+					view_count,
+
+					status,
+					rating)
+			values ('$name', 
+					'$sku', 
+					'$cate_id', 
+
+					'$disabled_comment', 
+					'$price', 
+					'$sale_price',
+					
+					'$detail',
+					'$feature_image',
+					'$view_count',
+
+					'$status',
+					'$rating')";
+	// executeQuery($sqlQuery);
+}
 // tạo dữ liệu mẫu cho bảng product_galleries
 // tạo dữ liệu mẫu cho bảng vouchers
 
