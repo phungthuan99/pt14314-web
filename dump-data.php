@@ -80,8 +80,11 @@ for ($i=0; $i < 100; $i++) {
 	$sale_price = rand(1000, 99999);
 	$detail = $faker->realText($maxNbChars = 200, $indexSize = 2);
 	$detail = str_replace("'","\'", $detail);
+
 	$feature_image = $faker->image('public/images', 640, 480, 'cats');
 	$feature_image = str_replace("public/", "", $feature_image);
+	$feature_image = str_replace("\\", "/", $feature_image);
+	
 	$view_count = rand(0, 999999);
 	$status = 1;
 	$rating = rand(1, 5);
