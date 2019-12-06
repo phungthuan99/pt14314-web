@@ -28,7 +28,7 @@ try {
     $mail->setFrom('d3tmobilebk@gmail.com', 'Sender');
     
     $mail->addAddress('datntph08807@fpt.edu.vn', 'Đạt 09');     // Add a recipient
-    $mail->addAddress('thienth32@gmail.com', "ThienTH");               // Name is optional
+    $mail->addAddress('namppph05917@fpt.edu.vn', "Phan Phương Nam");               // Name is optional
     $mail->addAddress('trungnqph05703@fpt.edu.vn', "Trung Trâu");
 
 	// Name is optional
